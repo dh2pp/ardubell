@@ -1,0 +1,58 @@
+03-06 18:49:31 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:'debouncedButton', file:'debouncedButton.sch'
+03-06 18:49:31 replicate_layout.replicatelayout 256:Source sheet path up to the level:['UI', 'debouncedButton']
+03-06 18:49:31 replicate_layout.replicatelayout 260:Footprints on the sheets:
+['SW2', 'SW1']
+03-06 18:49:31 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+['/604568F4/60456C34/604A22C9', '/604568F4/60456C1B/604A22C9']
+03-06 18:49:31 replicate_layout.replicatelayout 279:All sheets to replicate:
+[['UI', 'debouncedButton2'], ['UI', 'debouncedButton']]
+03-06 18:49:31 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[['UI', 'debouncedButton'], ['UI', 'debouncedButton2']]
+03-06 18:49:31 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[['UI', 'debouncedButton2']]
+03-06 18:49:34 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:'debouncedButton', file:'debouncedButton.sch'
+03-06 18:49:34 replicate_layout.replicatelayout 256:Source sheet path up to the level:['UI', 'debouncedButton']
+03-06 18:49:34 replicate_layout.replicatelayout 260:Footprints on the sheets:
+['SW2', 'SW1']
+03-06 18:49:34 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+['/604568F4/60456C34/604A22C9', '/604568F4/60456C1B/604A22C9']
+03-06 18:49:34 replicate_layout.replicatelayout 279:All sheets to replicate:
+[['UI', 'debouncedButton2'], ['UI', 'debouncedButton']]
+03-06 18:49:34 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[['UI', 'debouncedButton'], ['UI', 'debouncedButton2']]
+03-06 18:49:34 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[['UI', 'debouncedButton2']]
+03-06 18:49:34 replicate_layout.action_replicate_layout 179:Replicating layout
+03-06 18:49:34 replicate_layout.replicatelayout 991:Starting replication of sheets: [['UI', 'debouncedButton2']]
+on level: ['UI', 'debouncedButton']
+with tracks=True, zone=True, text=True, containing=True, remove=False, locked=False
+03-06 18:49:34 root 261:updating GUI message: 'Preparing for replication'
+03-06 18:49:34 root 266:updating GUI with: 0
+03-06 18:49:34 replicate_layout.replicatelayout 556:Getting the list of source footprints
+03-06 18:49:34 root 266:updating GUI with: 0
+03-06 18:49:34 replicate_layout.replicatelayout 560:Getting the list of all the remaining footprints
+03-06 18:49:34 replicate_layout.replicatelayout 564:Getting nets local to source footprints
+03-06 18:49:34 replicate_layout.replicatelayout 568:Getting source bounding box
+03-06 18:49:34 replicate_layout.replicatelayout 572:Getting source tracks
+03-06 18:49:34 replicate_layout.replicatelayout 576:Getting source zones
+03-06 18:49:34 replicate_layout.replicatelayout 580:Getting source text items
+03-06 18:49:34 replicate_layout.replicatelayout 584:Getting source text items
+03-06 18:49:34 root 261:updating GUI message: 'Replicating footprints'
+03-06 18:49:34 replicate_layout.replicatelayout 590:Replicating footprints
+03-06 18:49:34 root 266:updating GUI with: 0
+03-06 18:49:34 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['UI', 'debouncedButton2']
+03-06 18:49:34 root 261:updating GUI message: 'Replicating tracks'
+03-06 18:49:34 replicate_layout.replicatelayout 720:Replicating tracks
+03-06 18:49:34 root 266:updating GUI with: 0
+03-06 18:49:34 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['UI', 'debouncedButton2']
+03-06 18:49:34 root 261:updating GUI message: 'Replicating zones'
+03-06 18:49:34 replicate_layout.replicatelayout 771:Replicating zones
+03-06 18:49:34 replicate_layout.replicatelayout 778:Replicating zones on sheet ['UI', 'debouncedButton2']
+03-06 18:49:34 root 261:updating GUI message: 'Replicating text'
+03-06 18:49:34 replicate_layout.replicatelayout 837:Replicating text
+03-06 18:49:34 root 266:updating GUI with: 0
+03-06 18:49:34 replicate_layout.replicatelayout 844:Replicating text on sheet ['UI', 'debouncedButton2']
+03-06 18:49:34 root 261:updating GUI message: 'Replicating drawings'
+03-06 18:49:34 replicate_layout.replicatelayout 868:Replicating drawings
+03-06 18:49:34 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['UI', 'debouncedButton2']
+03-06 18:49:34 replicate_layout.action_replicate_layout 201:Replication complete

@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L dk_Embedded-Microcontrollers:ATMEGA328P-AU U1
+L arduBell-rescue:ATMEGA328P-AU-dk_Embedded-Microcontrollers U1
 U 1 1 5FF53399
 P 5900 3950
 F 0 "U1" H 6228 4053 60  0000 L CNN
@@ -34,7 +34,7 @@ F 12 "Active" H 6100 5150 60  0001 L CNN "Status"
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:22-23-2021 J3
+L arduBell-rescue:22-23-2021-dk_Rectangular-Connectors-Headers-Male-Pins J3
 U 1 1 5FF54EE3
 P 6750 1700
 F 0 "J3" V 6841 1572 50  0000 R CNN
@@ -58,7 +58,7 @@ L Device:C_Small C2
 U 1 1 5FF56E0B
 P 6050 1250
 F 0 "C2" V 5821 1250 50  0000 C CNN
-F 1 "C_Small" V 5912 1250 50  0000 C CNN
+F 1 "100n" V 5912 1250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6050 1250 50  0001 C CNN
 F 3 "~" H 6050 1250 50  0001 C CNN
 	1    6050 1250
@@ -69,7 +69,7 @@ L Device:C_Small C3
 U 1 1 5FF572E4
 P 6050 1600
 F 0 "C3" V 5821 1600 50  0000 C CNN
-F 1 "C_Small" V 5912 1600 50  0000 C CNN
+F 1 "1u" V 5912 1600 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6050 1600 50  0001 C CNN
 F 3 "~" H 6050 1600 50  0001 C CNN
 	1    6050 1600
@@ -80,7 +80,7 @@ L Device:CP_Small C4
 U 1 1 5FF5C83C
 P 6050 1950
 F 0 "C4" V 5825 1950 50  0000 C CNN
-F 1 "CP_Small" V 5916 1950 50  0000 C CNN
+F 1 "4.7u" V 5916 1950 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 6050 1950 50  0001 C CNN
 F 3 "~" H 6050 1950 50  0001 C CNN
 	1    6050 1950
@@ -194,17 +194,6 @@ F 3 "" H 6600 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6600 1700 6650 1700
-$Comp
-L Device:Crystal_GND2 Y1
-U 1 1 5FF6D2C8
-P 4400 2900
-F 0 "Y1" V 4354 3030 50  0000 L CNN
-F 1 "Crystal_GND2" V 4445 3030 50  0000 L CNN
-F 2 "Crystal:Crystal_HC49-4H_Vertical" H 4400 2900 50  0001 C CNN
-F 3 "~" H 4400 2900 50  0001 C CNN
-	1    4400 2900
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4400 2750 5200 2750
 Wire Wire Line
@@ -220,24 +209,20 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0105
 U 1 1 5FF6EA88
-P 4100 3000
-F 0 "#PWR0105" H 4100 2750 50  0001 C CNN
-F 1 "GND" H 4105 2827 50  0000 C CNN
-F 2 "" H 4100 3000 50  0001 C CNN
-F 3 "" H 4100 3000 50  0001 C CNN
-	1    4100 3000
+P 3950 2950
+F 0 "#PWR0105" H 3950 2700 50  0001 C CNN
+F 1 "GND" H 3955 2777 50  0000 C CNN
+F 2 "" H 3950 2950 50  0001 C CNN
+F 3 "" H 3950 2950 50  0001 C CNN
+	1    3950 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4100 3000 4100 2900
-Wire Wire Line
-	4100 2900 4200 2900
 $Comp
 L Device:C_Small C1
 U 1 1 5FF6F61E
 P 4600 5050
 F 0 "C1" V 4371 5050 50  0000 C CNN
-F 1 "C_Small" V 4462 5050 50  0000 C CNN
+F 1 "100n" V 4462 5050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4600 5050 50  0001 C CNN
 F 3 "~" H 4600 5050 50  0001 C CNN
 	1    4600 5050
@@ -261,7 +246,7 @@ L Device:R_Small R2
 U 1 1 5FF71218
 P 3850 4750
 F 0 "R2" V 4046 4750 50  0000 C CNN
-F 1 "R_Small" V 3955 4750 50  0000 C CNN
+F 1 "1K" V 3955 4750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 3850 4750 50  0001 C CNN
 F 3 "~" H 3850 4750 50  0001 C CNN
 	1    3850 4750
@@ -272,7 +257,7 @@ L Device:R_Small R3
 U 1 1 5FF730FC
 P 4150 4650
 F 0 "R3" V 4346 4650 50  0000 C CNN
-F 1 "R_Small" V 4255 4650 50  0000 C CNN
+F 1 "1K" V 4255 4650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 4150 4650 50  0001 C CNN
 F 3 "~" H 4150 4650 50  0001 C CNN
 	1    4150 4650
@@ -285,7 +270,7 @@ RESET
 Wire Wire Line
 	5400 4550 4950 4550
 $Comp
-L dk_Pushbutton-Switches:GPTS203211B S1
+L arduBell-rescue:GPTS203211B-dk_Pushbutton-Switches S1
 U 1 1 5FF7A8EF
 P 1700 4500
 F 0 "S1" H 1700 4775 50  0000 C CNN
@@ -320,7 +305,7 @@ L Device:R_Small R1
 U 1 1 5FF7BEA7
 P 1900 3950
 F 0 "R1" H 1959 3996 50  0000 L CNN
-F 1 "R_Small" H 1959 3905 50  0000 L CNN
+F 1 "1K" H 1959 3905 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 1900 3950 50  0001 C CNN
 F 3 "~" H 1900 3950 50  0001 C CNN
 	1    1900 3950
@@ -434,7 +419,7 @@ F 3 "http://lunainc.com/wp-content/uploads/2016/06/NSL-32.pdf" H 1450 5650 50  0
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:22-23-2021 J4
+L arduBell-rescue:22-23-2021-dk_Rectangular-Connectors-Headers-Male-Pins J4
 U 1 1 6000BCD1
 P 900 5600
 F 0 "J4" V 675 5608 50  0000 C CNN
@@ -481,7 +466,7 @@ L Device:C_Small C5
 U 1 1 60010FCA
 P 2050 5850
 F 0 "C5" H 1958 5804 50  0000 R CNN
-F 1 "C_Small" H 1958 5895 50  0000 R CNN
+F 1 "100n" H 1958 5895 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2050 5850 50  0001 C CNN
 F 3 "~" H 2050 5850 50  0001 C CNN
 	1    2050 5850
@@ -492,7 +477,7 @@ L Device:CP_Small C6
 U 1 1 600115B2
 P 2550 5850
 F 0 "C6" H 2638 5896 50  0000 L CNN
-F 1 "CP_Small" H 2638 5805 50  0000 L CNN
+F 1 "4.7u" H 2638 5805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 2550 5850 50  0001 C CNN
 F 3 "~" H 2550 5850 50  0001 C CNN
 	1    2550 5850
@@ -582,7 +567,7 @@ Relay1_coil
 Text Label 2000 1450 0    50   ~ 0
 Relay2_coil
 $Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:22-23-2021 J5
+L arduBell-rescue:22-23-2021-dk_Rectangular-Connectors-Headers-Male-Pins J5
 U 1 1 6044A086
 P 3750 950
 F 0 "J5" V 3841 822 50  0000 R CNN
@@ -604,7 +589,7 @@ $EndComp
 Wire Wire Line
 	3300 850  3650 850 
 $Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:22-23-2021 J6
+L arduBell-rescue:22-23-2021-dk_Rectangular-Connectors-Headers-Male-Pins J6
 U 1 1 6044D3F4
 P 3750 1550
 F 0 "J6" V 3841 1422 50  0000 R CNN
@@ -691,7 +676,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 4250 5400 4250
 $Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:640456-3 J2
+L arduBell-rescue:640456-3-dk_Rectangular-Connectors-Headers-Male-Pins J2
 U 1 1 5FF945AB
 P 3300 4650
 F 0 "J2" V 3075 4658 50  0000 C CNN
@@ -710,4 +695,56 @@ F 12 "Active" H 3500 5850 60  0001 L CNN "Status"
 	1    3300 4650
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 60971625
+P 4400 2900
+F 0 "Y1" V 4354 3031 50  0000 L CNN
+F 1 "Crystal" V 4445 3031 50  0000 L CNN
+F 2 "" H 4400 2900 50  0001 C CNN
+F 3 "~" H 4400 2900 50  0001 C CNN
+	1    4400 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 6098B825
+P 4250 2750
+F 0 "C9" V 4021 2750 50  0000 C CNN
+F 1 "10p" V 4112 2750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4250 2750 50  0001 C CNN
+F 3 "~" H 4250 2750 50  0001 C CNN
+	1    4250 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 2750 4400 2750
+Connection ~ 4400 2750
+$Comp
+L Device:C_Small C10
+U 1 1 6098F24F
+P 4250 3050
+F 0 "C10" V 4021 3050 50  0000 C CNN
+F 1 "10p" V 4112 3050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4250 3050 50  0001 C CNN
+F 3 "~" H 4250 3050 50  0001 C CNN
+	1    4250 3050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4350 3050 4400 3050
+Connection ~ 4400 3050
+Wire Wire Line
+	4150 2750 4050 2750
+Wire Wire Line
+	4050 2750 4050 2900
+Wire Wire Line
+	4050 3050 4150 3050
+Wire Wire Line
+	4050 2900 3950 2900
+Wire Wire Line
+	3950 2900 3950 2950
+Connection ~ 4050 2900
+Wire Wire Line
+	4050 2900 4050 3050
 $EndSCHEMATC

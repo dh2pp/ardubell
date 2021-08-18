@@ -421,21 +421,21 @@ $EndComp
 $Comp
 L arduBell-rescue:22-23-2021-dk_Rectangular-Connectors-Headers-Male-Pins J4
 U 1 1 6000BCD1
-P 900 5600
-F 0 "J4" V 675 5608 50  0000 C CNN
-F 1 "BELL" V 766 5608 50  0000 C CNN
-F 2 "digikey-footprints:PinHeader_1x2_P2.54mm_Drill1.02mm" H 1100 5800 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/A-6373-N_Series_Dwg_2010-12-03.pdf" H 1100 5900 60  0001 L CNN
-F 4 "WM4200-ND" H 1100 6000 60  0001 L CNN "Digi-Key_PN"
-F 5 "22-23-2021" H 1100 6100 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 1100 6200 60  0001 L CNN "Category"
-F 7 "Rectangular Connectors - Headers, Male Pins" H 1100 6300 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/A-6373-N_Series_Dwg_2010-12-03.pdf" H 1100 6400 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/molex/22-23-2021/WM4200-ND/26667" H 1100 6500 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN HEADER VERT 2POS 2.54MM" H 1100 6600 60  0001 L CNN "Description"
-F 11 "Molex" H 1100 6700 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1100 6800 60  0001 L CNN "Status"
-	1    900  5600
+P 650 5600
+F 0 "J4" V 425 5608 50  0000 C CNN
+F 1 "BELL" V 516 5608 50  0000 C CNN
+F 2 "digikey-footprints:PinHeader_1x2_P2.54mm_Drill1.02mm" H 850 5800 60  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/A-6373-N_Series_Dwg_2010-12-03.pdf" H 850 5900 60  0001 L CNN
+F 4 "WM4200-ND" H 850 6000 60  0001 L CNN "Digi-Key_PN"
+F 5 "22-23-2021" H 850 6100 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 850 6200 60  0001 L CNN "Category"
+F 7 "Rectangular Connectors - Headers, Male Pins" H 850 6300 60  0001 L CNN "Family"
+F 8 "https://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/A-6373-N_Series_Dwg_2010-12-03.pdf" H 850 6400 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/molex/22-23-2021/WM4200-ND/26667" H 850 6500 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN HEADER VERT 2POS 2.54MM" H 850 6600 60  0001 L CNN "Description"
+F 11 "Molex" H 850 6700 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 850 6800 60  0001 L CNN "Status"
+	1    650  5600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -747,4 +747,19 @@ Wire Wire Line
 Connection ~ 4050 2900
 Wire Wire Line
 	4050 2900 4050 3050
+$Comp
+L Device:R_Small R14
+U 1 1 611CCF5C
+P 900 5600
+F 0 "R14" V 1096 5600 50  0000 C CNN
+F 1 "270R" V 1005 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 900 5600 50  0001 C CNN
+F 3 "~" H 900 5600 50  0001 C CNN
+	1    900  5600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	750  5600 800  5600
+Wire Wire Line
+	750  5700 1000 5700
 $EndSCHEMATC

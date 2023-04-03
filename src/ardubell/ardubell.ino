@@ -17,8 +17,8 @@
 #define button2 A3
 #define belldetect A0
 
-unsigned long timeout_inter_character = 500;
-unsigned long debounce_millis = 20;
+const unsigned long timeout_inter_character = 500;
+const unsigned long debounce_millis = 20;
 
 State WAIT_BELL = State(wait_bell);
 State DETECT_PATTERN = State(detect_pattern);
@@ -27,7 +27,7 @@ State RING = State(ring);
 
 FSM fsm = FSM(WAIT_BELL);
 
-int code[4][2] = {{10,200},
+const int code[4][2] = {{10,200},
                   {400,5000},
                   {400,5000},
                   {10,300},};
@@ -49,6 +49,7 @@ void wait_bell() {
     digitalWrite(ledPin1, LOW);
     unsigned long i = 0;
     int led = 1;
+    unsigned long t_inter = 0;
 
     while (true) {
         ++i;
@@ -58,7 +59,7 @@ void wait_bell() {
             digitalWrite(ledPin2, led);
         }
 
-        unsigned long t_inter = millis();
+        t_inter = millis();
         delay(1);
         while (digitalRead(belldetect) == HIGH && millis() - t_inter < debounce_millis) {
             digitalWrite(ledPin1, HIGH);
@@ -77,6 +78,10 @@ void wait_bell() {
 // transition state with branching: unlock, ring or go back to idle?
 // assumes, that bell is pressed, enters after bouncing
 void detect_pattern() {
+    unsigned long t_inter = 0;
+    unsigned long t0 = 0;
+    unsigned long t_i = 0;
+    unsigned long remaining_code_length = 0;
     digitalWrite(ledPin1, LOW);
     digitalWrite(ledPin2, LOW);
     digitalWrite(ledPin3, LOW);
@@ -88,11 +93,7 @@ void detect_pattern() {
             fsm.transitionTo(RING);
             break;
         }
-        else {
-          if (i==0) digitalWrite(ledPin2, HIGH);
-          if (i==1) digitalWrite(ledPin3, HIGH);
-          if (i==2) digitalWrite(ledPin1, HIGH);
-        }
+
         if (digitalRead(belldetect) == HIGH) {
             delay(code[i][0]);
             if (digitalRead(belldetect) == LOW) {
@@ -105,11 +106,11 @@ void detect_pattern() {
               break;
             }
             // HIGH waiting to become debounced LOW
-            unsigned long t_inter = millis();
-            unsigned long t0 = millis();
-            unsigned long t_i = 0;
+            t_inter = millis();
+            t0 = millis();
+            t_i = 0;
 
-            unsigned long remaining_code_length = code[i][1] - code[i][0];
+            remaining_code_length = code[i][1] - code[i][0];
             while (digitalRead(belldetect) == HIGH || millis() - t_inter < debounce_millis) {
                 delay(1);
                 t_i = millis();

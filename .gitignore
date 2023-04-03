@@ -4,6 +4,7 @@
 
 !PCB/*
 !src/*
+src/ardubell/.idea/
 
 # Temporary files
 *.000
